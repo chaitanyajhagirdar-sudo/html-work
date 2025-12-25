@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>My Complete Website</title> <!-- Appears in the browser tab -->
+
+    <!-- Link to an external CSS file for styling (create a file named 'style.css' in the same folder) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header section, often contains a logo or site name -->
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>A simple, complete website structure.</p>
+    </header>
+
+    <!-- Navigation bar with links -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+        <section id="home">
+            <h2>Home Section</h2>
+            <p>This is the main content area of the homepage. All visible page content goes inside the <body> element.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about this website and its purpose. We use semantic elements like <section> and <article> to structure content.</p>
+        </section>
+
+        <article id="contact">
+            <h2>Contact Information</h2>
+            <p>You can reach us via this contact information.</p>
+        </article>
+    </main>
+
+    <!-- Footer section for copyright and extra links -->
+    <footer>
+        <p>&copy; 2025 My Website | Powered by HTML</p>
+    </footer>
+
+</body>
+</html>
