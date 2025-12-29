@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .container { max-width: 400px; margin: auto; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        input { margin-bottom: 10px; padding: 8px; width: 100%; box-sizing: border-box; }
+        button { padding: 10px; width: 100%; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; }
+        .results { margin-top: 20px; padding-top: 15px; border-top: 2px solid #eee; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>Input Numbers</h3>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+   
+    <div>
+        <button onclick="calculate()">Calculate</button>
+    </div>
+
+    <div class="results">
+        <h3>Calculated Results</h3>
+        <label>Sum:</label>
+        <input type="text" id="resSum" readonly placeholder="Result shows here">
+        <label>Sub:</label>
+        <input type="text" id="resSub" readonly placeholder="Result shows here">
+        <label>Mul:</label>
+        <input type="text" id="resMul" readonly placeholder="Result shows here">
+        <label>Div:</label>
+        <input type="text" id="resDiv" readonly placeholder="Result shows here">
+       
+        <p><strong>Display as HTML Text:</strong> <span id="textResult">Waiting for input...</span></p>
+    </div>
+</div>
+
+<script>
+    function calculate() {
+     
+        const n1 = parseFloat(document.getElementById('num1').value);
+        const n2 = parseFloat(document.getElementById('num2').value);
+
+       
+        if (isNaN(n1) || isNaN(n2)) {
+            document.getElementById('textResult').textContent = "Please enter valid numbers.";
+            return;
+        }
+
+   
+        const sum = n1 + n2;
+        const sub = n1 - n2;
+        const mul = n1 * n2;
+        const div = n2 !== 0 ? (n1 / n2).toFixed(2) : "Cannot divide by zero";
+
+        const resultString = `Sum: ${sum} | Sub: ${sub} | Mul: ${mul} | Div: ${div}`;
+
+ 
+        document.getElementById('resSum').value = sum;
+        document.getElementById('resSub').value = sub;
+        document.getElementById('resMul').value = mul;
+        document.getElementById('resDiv').value = div;
+
+       
+        document.getElementById('textResult').textContent = resultString;
+    }
+</script>
+
+</body>
+</html>
