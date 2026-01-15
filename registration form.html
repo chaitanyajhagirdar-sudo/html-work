@@ -1,0 +1,70 @@
+<form action="submit_form.php" method="POST">
+    <h2>Student Registration</h2>
+    <p>Please fill in this form with the student's details.</p>
+    <hr>
+
+    <div class="form-group">
+        <label for="rollno">Roll No:</label>
+        <input type="text" id="rollno" name="rollno" required minlength="5" maxlength="10">
+    </div>
+
+    <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="user@example.com" required>
+    </div>
+
+    <div class="form-group">
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male" style="display: inline;">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female" style="display: inline;">Female</label><br>
+    </div>
+
+    <div class="form-group">
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+            <option value="">-- Choose an option --</option>
+            <option value="bca">BCA</option>
+            <option value="bba">BBA</option>
+            <option value="btech">B.Tech</option>
+            <option value="mca">MCA</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Select Department(s):</label>
+        <input type="checkbox" id="dept1" name="departments[]" value="cse">
+        <label for="dept1" style="display: inline;">Computer Science</label><br>
+        <input type="checkbox" id="dept2" name="departments[]" value="it">
+        <label for="dept2" style="display: inline;">Information Technology</label><br>
+        <input type="checkbox" id="dept3" name="departments[]" value="ece">
+        <label for="dept3" style="display: inline;">Electronics & Communication</label><br>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="studentphoto">Upload Student Photo:</label>
+        <input type="file" id="studentphoto" name="studentphoto" accept="image/*">
+    </div>
+
+    <hr>
+    <button type="submit">Register Now</button>
+</form>
+
+</body>
+</html>
